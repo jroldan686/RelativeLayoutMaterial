@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="jrl.deint.relativelayoutmaterial.RelativeLayoutMaterialActivity">
+
+    <ImageView
+        android:id="@+id/imgvCity"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/malaga" />
+
+    <ImageView
+        android:id="@+id/imgFavorites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="181dp"
+        app:srcCompat="@android:drawable/star_big_off" />
+
+    <TextView
+        android:id="@+id/txvMonument"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txvMonument"
+        android:layout_below="@+id/imgvCity"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <TextView
+        android:id="@+id/txvDateVisit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txvDateVisit"
+        android:layout_below="@+id/txvMonument"
+        android:layout_alignStart="@+id/txvMonument"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+    <EditText
+        android:id="@+id/edtDateVisit"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="date"
+        android:layout_toEndOf="@+id/txvDateVisit"
+        android:layout_alignBaseline="@+id/txvDateVisit"
+        android:layout_marginStart="10dp" />
+
+    <TextView
+        android:id="@+id/txvTypeVisit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txvTypeVisit"
+        android:layout_alignStart="@+id/txvDateVisit"
+        android:layout_below="@+id/txvDateVisit"
+        android:layout_marginTop="30dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+    <EditText
+        android:id="@+id/edtTypeVisit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_alignStart="@+id/edtDateVisit"
+        android:layout_alignEnd="@+id/edtDateVisit"
+        android:layout_alignBaseline="@+id/txvTypeVisit" />
+
+    <Button
+        android:id="@+id/btnBuy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnBuy"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@id/imgFavorites"
+        android:layout_marginBottom="10dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+    <Button
+        android:id="@+id/btnReserved"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnReserved"
+        android:layout_toStartOf="@+id/btnBuy"
+        android:layout_alignBaseline="@+id/btnBuy"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+</RelativeLayout>

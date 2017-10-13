@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RelativeLayoutMaterial</string>
+    <string name="btnBuy">Kaufen</string>
+    <string name="btnReserved">Buchen</string>
+    <string name="txvDateVisit">Besuchdatum</string>
+    <string name="txvMonument">Kathedrale</string>
+    <string name="txvTypeVisit">Eingabetyp</string>
+</resources>

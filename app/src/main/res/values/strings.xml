@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">RelativeLayoutMaterial</string>
+    <string name="txvMonument">Catedral</string>
+    <string name="txvDateVisit">Fecha Visita</string>
+    <string name="txvTypeVisit">Tipo Entrada</string>
+    <string name="btnReserved">Reservar</string>
+    <string name="btnBuy">Comprar</string>
+</resources>
