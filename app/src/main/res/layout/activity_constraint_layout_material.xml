@@ -8,92 +8,111 @@
 
     <ImageView
         android:id="@+id/imgvCity"
-        android:layout_width="wrap_content"
-        android:layout_height="200dp"
-        android:layout_alignParentStart="true"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:contentDescription="@string/imgvCityDescription"
         android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/imgvFavorites"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/malaga" />
 
     <ImageView
-        android:id="@+id/imgFavorites"
+        android:id="@+id/imgvFavorites"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginEnd="30dp"
-        android:layout_marginTop="181dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/imgvFavoritesDescription"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.38"
         app:srcCompat="@android:drawable/star_big_off" />
 
     <TextView
         android:id="@+id/txvMonument"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/txvMonument"
-        android:layout_below="@+id/imgvCity"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="20dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+        android:layout_below="@+id/imgvCity"
+        android:layout_marginTop="24dp"
+        android:text="@string/txvMonument"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintTop_toBottomOf="@+id/imgvCity"
+        tools:layout_editor_absoluteX="29dp" />
 
     <TextView
         android:id="@+id/txvDateVisit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/txvDateVisit"
-        android:layout_below="@+id/txvMonument"
         android:layout_alignStart="@+id/txvMonument"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="20dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+        android:layout_below="@+id/txvMonument"
+        android:layout_marginStart="24dp"
+        android:text="@string/txvDateVisit"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintStart_toStartOf="@+id/txvMonument"
+        tools:layout_editor_absoluteY="266dp" />
 
     <EditText
         android:id="@+id/edtDateVisit"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txvDateVisit"
+        android:layout_toEndOf="@+id/txvDateVisit"
         android:ems="10"
         android:inputType="date"
-        android:layout_toEndOf="@+id/txvDateVisit"
-        android:layout_alignBaseline="@+id/txvDateVisit"
-        android:layout_marginStart="10dp" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/txvTypeVisit"
+        app:layout_constraintStart_toStartOf="@+id/edtTypeVisit" />
 
     <TextView
         android:id="@+id/txvTypeVisit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/txvTypeVisit"
         android:layout_alignStart="@+id/txvDateVisit"
         android:layout_below="@+id/txvDateVisit"
-        android:layout_marginTop="30dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+        android:text="@string/txvTypeVisit"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintStart_toStartOf="@+id/txvDateVisit"
+        tools:layout_editor_absoluteY="316dp" />
 
     <EditText
         android:id="@+id/edtTypeVisit"
-        android:layout_width="wrap_content"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txvTypeVisit"
+        android:layout_alignEnd="@+id/edtDateVisit"
+        android:layout_alignStart="@+id/edtDateVisit"
         android:ems="10"
         android:inputType="textPersonName"
-        android:layout_alignStart="@+id/edtDateVisit"
-        android:layout_alignEnd="@+id/edtDateVisit"
-        android:layout_alignBaseline="@+id/txvTypeVisit" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/txvDateVisit"
+        tools:layout_editor_absoluteX="160dp" />
 
     <Button
         android:id="@+id/btnBuy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/btnBuy"
-        android:layout_alignParentBottom="true"
         android:layout_alignEnd="@id/imgFavorites"
-        android:layout_marginBottom="10dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+        android:layout_alignParentBottom="true"
+        android:text="@string/btnBuy"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintEnd_toStartOf="@+id/imgvFavorites"
+        tools:layout_editor_absoluteY="447dp" />
 
     <Button
         android:id="@+id/btnReserved"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/btnReserved"
-        android:layout_toStartOf="@+id/btnBuy"
         android:layout_alignBaseline="@+id/btnBuy"
-        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+        android:layout_marginEnd="8dp"
+        android:layout_toStartOf="@+id/btnBuy"
+        android:text="@string/btnReserved"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintEnd_toStartOf="@+id/btnBuy"
+        tools:layout_editor_absoluteY="447dp" />
 
 </android.support.constraint.ConstraintLayout>

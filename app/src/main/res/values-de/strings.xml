@@ -6,4 +6,6 @@
     <string name="txvDateVisit">Besuchdatum</string>
     <string name="txvMonument">Kathedrale</string>
     <string name="txvTypeVisit">Eingabetyp</string>
+    <string name="imgvCityDescription">Kathedrale von Malaga</string>
+    <string name="imgvFavoritesDescription">Favoriten</string>
 </resources>

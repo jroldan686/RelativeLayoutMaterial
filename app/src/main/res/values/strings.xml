@@ -5,4 +5,6 @@
     <string name="txvTypeVisit">Tipo Entrada</string>
     <string name="btnReserved">Reservar</string>
     <string name="btnBuy">Comprar</string>
+    <string name="imgvCityDescription">Catedral de Málaga</string>
+    <string name="imgvFavoritesDescription">Favoritos</string>
 </resources>
